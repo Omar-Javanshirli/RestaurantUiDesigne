@@ -5,17 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantUiDesigne.UserCantrols"
              mc:Ignorable="d"  d:DesignWidth="40" Name="menuButton">
-    
-    
+
+
     <Grid Margin="0 -17">
-        <Grid HorizontalAlignment="Right" Width="20" Height="85" Panel.ZIndex="1" Visibility="Visible">
-            <Path Fill="#252836" Stretch="Fill"  Data="M0 20.7C15 20 26.5 12 27 0V87.6C26 75 15.1 67.5 0 67V24Z"/>
-        </Grid>
-        <Button Name="btn" Style="{StaticResource menuButton}">
-            <StackPanel Orientation="Horizontal">
-                <Image/>
-                <TextBlock Text="Hello" />
-            </StackPanel>
-        </Button>
+        <StackPanel Canvas.Right="5" Canvas.Top="80">
+            <Border CornerRadius="20 10 10 20" Margin="0 0 0 0 " Background="#1F1D2B">
+                <Button Style="{StaticResource menuButton}" Width="40">
+                    <Border Width="30" Height="30">
+                        <Button Style="{StaticResource myButton}" Width="30" Height="30" Background="#EA7C69">
+                            <Image Source="/Image/pizza.png" Width="25"/>
+                        </Button>
+                    </Border>
+                </Button>
+            </Border>
+        </StackPanel>
     </Grid>
 </UserControl>
