@@ -14,7 +14,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Canvas Background="#1F1D2B" Height="450" Width="50">
+        <Canvas Background="#1F1D2B" Height="450" Width="50" x:Name="menuBarCanvas">
             <StackPanel Canvas.Right="5" Canvas.Top="20">
                 <Border CornerRadius="20 10 10 20" Margin="0 0 0 0 " Background="#1F1D2B">
                     <Button Style="{StaticResource menuButton}" Width="40">
@@ -26,8 +26,7 @@
                     </Button>
                 </Border>
             </StackPanel>
-            
-            <local:MenuButton Canvas.Right="5" Canvas.Top="100"></local:MenuButton>
+
         </Canvas>
 
         <Border Grid.Column="1" Background="#252836" Margin="-10 0 0 0" CornerRadius="4 4 4 4"></Border>

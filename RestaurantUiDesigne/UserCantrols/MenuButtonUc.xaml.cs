@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RestaurantUiDesigne.Model;
+using RestaurantUiDesigne.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,10 @@ namespace RestaurantUiDesigne.UserCantrols
     /// </summary>
     public partial class MenuButton : UserControl
     {
-        public MenuButton()
+        public MenuButton(ImageClass image)
         {
             InitializeComponent();
+            this.DataContext = new MenuButtonViewUc(image);
         }
     }
 }
