@@ -11,10 +11,7 @@ namespace RestaurantUiDesigne.ViewModels
 {
     public class MenuButtonViewUc : BaseViewModel
     {
-        public ImageClass image { get; set; }
-        public MenuButtonViewUc(ImageClass image)
-        {
-            this.image = image;
-        }
+        public ImageClass Image { get; set; }
+       
     }
 }

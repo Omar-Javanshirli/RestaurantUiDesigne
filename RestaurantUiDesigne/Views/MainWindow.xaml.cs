@@ -24,7 +24,8 @@ namespace RestaurantUiDesigne
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new AppViewModel();
+            var vm = new AppViewModel(this);
+            this.DataContext = vm;
         }
     }
 }

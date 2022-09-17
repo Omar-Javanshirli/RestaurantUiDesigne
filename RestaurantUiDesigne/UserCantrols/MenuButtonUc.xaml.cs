@@ -22,10 +22,10 @@ namespace RestaurantUiDesigne.UserCantrols
     /// </summary>
     public partial class MenuButton : UserControl
     {
-        public MenuButton(ImageClass image)
+        public MenuButton()
         {
             InitializeComponent();
-            this.DataContext = new MenuButtonViewUc(image);
+            this.DataContext = new MenuButtonViewUc();
         }
     }
 }

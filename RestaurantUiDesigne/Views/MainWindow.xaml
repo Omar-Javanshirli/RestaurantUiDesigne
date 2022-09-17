@@ -14,20 +14,9 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Canvas Background="#1F1D2B" Height="450" Width="50" x:Name="menuBarCanvas">
-            <StackPanel Canvas.Right="5" Canvas.Top="20">
-                <Border CornerRadius="20 10 10 20" Margin="0 0 0 0 " Background="#1F1D2B">
-                    <Button Style="{StaticResource menuButton}" Width="40">
-                        <Border Width="30" Height="30">
-                            <Button Style="{StaticResource myButton}" Width="30" Height="30" Background="#EA7C69">
-                                <Image Source="/Image/home2.png" Width="25"/>
-                            </Button>
-                        </Border>
-                    </Button>
-                </Border>
-            </StackPanel>
-
-        </Canvas>
+        <Border CornerRadius="20" Background="Transparent">
+            <StackPanel Background="#1F1D2B" Height="450" Width="50" x:Name="menuBarCanvas"></StackPanel>
+        </Border>
 
         <Border Grid.Column="1" Background="#252836" Margin="-10 0 0 0" CornerRadius="4 4 4 4"></Border>
         <Border Grid.Column="2" Background="#1F1D2B" CornerRadius="10 10 10 10 " Margin="-10 0 0 0"></Border>
