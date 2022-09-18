@@ -30,7 +30,7 @@ namespace RestaurantUiDesigne.ViewModels
             _mainWindow = mainWindow;
             ImageRepository = new FakeRepo();
             Images = new ObservableCollection<ImageClass>(ImageRepository.GetAllImage());
-            int y = 40;
+            int y = 30;
             int x = 0;
             foreach (var item in Images)
             {
