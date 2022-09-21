@@ -10,9 +10,21 @@
     <Grid Margin="0 -17">
         <Border CornerRadius="20 10 10 20" Margin="0 0 0 0 " Background="#1F1D2B">
             <Button Style="{StaticResource menuButton}" Width="40">
-                <Border Width="30" Height="30" CornerRadius="10" Background="Transparent">
+                <Border Width="30" Height="30" CornerRadius="10" >
                     <Button Style="{StaticResource myButton}" Width="30" Height="30" >
-                        <Image Source="{Binding Image.Image,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                        <Border  CornerRadius="10" Padding="2"
+                    HorizontalAlignment="Center" VerticalAlignment="Center" >
+                            <Grid>
+                                <Border Name="mask" Background="White" CornerRadius="7"/>
+                                <StackPanel>
+                                    <StackPanel.OpacityMask>
+                                        <VisualBrush Visual="{Binding ElementName=mask}"/>
+                                    </StackPanel.OpacityMask>
+                                    <Image Source="{Binding Image.Image,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                       
                     </Button>
                 </Border>
             </Button>

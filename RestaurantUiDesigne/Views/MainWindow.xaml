@@ -15,10 +15,14 @@
         </Grid.ColumnDefinitions>
 
         <Border CornerRadius="20" Background="Transparent">
-            <StackPanel Background="#1F1D2B" Height="450" Width="50" x:Name="menuBarCanvas"></StackPanel>
+            <StackPanel Background="#1F1D2B" Height="450" Width="50" x:Name="menuBarCanvas">
+            </StackPanel>
+            
         </Border>
 
-        <Border Grid.Column="1" Background="#252836" Margin="-10 0 0 0" CornerRadius="4 4 4 4"></Border>
+        <Border Grid.Column="1" Background="#252836" Margin="-10 0 0 0" CornerRadius="4 4 4 4">
+
+        </Border>
         <Border Grid.Column="2" Background="#1F1D2B" CornerRadius="10 10 10 10 " Margin="-10 0 0 0"></Border>
     </Grid>
 </Window>
