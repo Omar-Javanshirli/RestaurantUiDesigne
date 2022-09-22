@@ -21,6 +21,14 @@ namespace RestaurantUiDesigne.Repo
                 {
                     Image="/Image/pizza.png"
                 },
+                new ImageClass
+                {
+                    Image="/Image/foods.png"
+                },
+                new ImageClass
+                {
+                    Image="/Image/drink.png"
+                }
             };
         } 
     }

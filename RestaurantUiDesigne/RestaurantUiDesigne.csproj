@@ -59,6 +59,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Dictionarys\TabCOntrolDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dictionarys\TextBlockDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -122,16 +126,16 @@
     <Resource Include="Image\pizza.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\home.png" />
+    <Resource Include="Image\foods.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\pizza2.png" />
+    <Resource Include="Image\drink.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\pizza3.png" />
+    <Resource Include="Image\exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\pizza4.png" />
+    <Resource Include="Image\Search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

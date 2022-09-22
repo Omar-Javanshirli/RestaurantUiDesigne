@@ -18,7 +18,7 @@ namespace RestaurantUiDesigne.Command
         Action<object> _execute;
         Predicate<object> _canExecute;
 
-        public RelayCommand(Action<object> execute, Predicate<object> canExecute)
+        public RelayCommand(Action<object> execute, Predicate<object> canExecute=null)
         {
             if (execute == null)
                 throw new ArgumentException();

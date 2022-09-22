@@ -1,4 +1,5 @@
-﻿using RestaurantUiDesigne.Model;
+﻿using RestaurantUiDesigne.Command;
+using RestaurantUiDesigne.Model;
 using RestaurantUiDesigne.Repo;
 using RestaurantUiDesigne.UserCantrols;
 using System;
@@ -17,13 +18,17 @@ namespace RestaurantUiDesigne.ViewModels
     {
         public FakeRepo ImageRepository { get; set; }
         public ObservableCollection<ImageClass> Images { get; set; }
-        private ImageClass image;
         public MainWindow _mainWindow;
+
+
+        private ImageClass image;
         public ImageClass Image
         {
             get { return image; }
             set { image = value; }
         }
+
+        public RelayCommand ChangeButtonCommand { get; set; }
 
         public AppViewModel(MainWindow mainWindow)
         {
@@ -43,6 +48,12 @@ namespace RestaurantUiDesigne.ViewModels
 
                 _mainWindow.menuBarCanvas.Children.Add(menuButton);
             }
+
+            ChangeButtonCommand = new RelayCommand(e =>
+            {
+                
+                
+            });
 
         }
     }
