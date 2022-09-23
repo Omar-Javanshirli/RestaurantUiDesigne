@@ -29,13 +29,23 @@
                            Canvas.Top="10"/>
                     <Grid Canvas.Top="70" Canvas.Left="10" Height="40">
                         <StackPanel Canvas.Top="70" Canvas.Left="10" Orientation="Horizontal" VerticalAlignment="Top" >
-                            <Button Uid="0" Content="Hot Dishes" Background="Transparent" Foreground="White" BorderThickness="0" Width="70" Style="{StaticResource myButton}" Command="{Binding ChangeButtonCommand}"/>
-                            <Button Uid="1" Content="Cold Dishes" Background="Transparent" Foreground="White" BorderThickness="0" Width="90" Style="{StaticResource myButton}" Command="{Binding ChangeButtonCommand}"/>
-                            <Button Uid="2" Content="Soup" Background="Transparent" Foreground="White" BorderThickness="0" Width="50" Style="{StaticResource myButton}" Command="{Binding ChangeButtonCommand}"/>
-                            <Button Uid="3" Content="Gril" Background="Transparent" Foreground="White" BorderThickness="0" Width="50" Style="{StaticResource myButton}" Command="{Binding ChangeButtonCommand}"/>
-                            <Button Uid="4" Content="Dessert" Background="Transparent" Foreground="White" BorderThickness="0" Width="60" Style="{StaticResource myButton}" Command="{Binding ChangeButtonCommand}"/>
+                            <Button Name="btn1" Content="Hot Dishes" Background="Transparent" Foreground="White" BorderThickness="0" Width="90" Style="{StaticResource myButton}" Command="{Binding ChangeButtonCommand}"
+                                    CommandParameter ="{Binding ElementName=btn1}"/>
+                                    
+                            <Button
+                                CommandParameter ="{Binding ElementName=btn2}"
+                                Name="btn2" Content="Cold Dishes" Background="Transparent" Foreground="White" BorderThickness="0" Width="90" Style="{StaticResource myButton}" Command="{Binding ChangeButtonCommand}"/>
+                            <Button 
+                                CommandParameter ="{Binding ElementName=btn3}"
+                                Name="btn3" Content="Soup" Background="Transparent" Foreground="White" BorderThickness="0" Width="90" Style="{StaticResource myButton}" Command="{Binding ChangeButtonCommand}"/>
+                            <Button
+                                CommandParameter ="{Binding ElementName=btn4}"
+                                Name="btn4" Content="Gril" Background="Transparent" Foreground="White" BorderThickness="0" Width="90" Style="{StaticResource myButton}" Command="{Binding ChangeButtonCommand}"/>
+                            <Button 
+                                CommandParameter ="{Binding ElementName=btn5}"
+                                Name="btn5" Content="Dessert" Background="Transparent" Foreground="White" BorderThickness="0" Width="90" Style="{StaticResource myButton}" Command="{Binding ChangeButtonCommand}"/>
                         </StackPanel>
-                        <Grid x:Name="gridCursor" Width="70" Canvas.Left="10" Canvas.Top="90" Height="3" Background="Orange" HorizontalAlignment="Left"/>
+                        <Grid x:Name="gridCursor" Width="90" Canvas.Left="10" Canvas.Top="90" Height="3" Background="Orange" HorizontalAlignment="Left"/>
                     </Grid>
                     <Border Canvas.Right="30" Canvas.Top="15" BorderThickness="0" Background="#2D303E" Width="150" Height="30"
                             CornerRadius="10">

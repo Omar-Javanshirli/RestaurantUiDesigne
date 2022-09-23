@@ -29,6 +29,23 @@ namespace RestaurantUiDesigne.ViewModels
         }
 
         public RelayCommand ChangeButtonCommand { get; set; }
+        public int GetIndexOfButton(Button button)
+        {
+            int index = 0;
+            var panel=button.Parent as StackPanel;
+            foreach (var item in panel.Children)
+            {
+                if(item is Button bt)
+                {
+                    if (bt.Name == button.Name)
+                    {
+                        return index;
+                    }
+                }
+                ++index;
+            }
+            return -1;
+        }
 
         public AppViewModel(MainWindow mainWindow)
         {
@@ -51,8 +68,9 @@ namespace RestaurantUiDesigne.ViewModels
 
             ChangeButtonCommand = new RelayCommand(e =>
             {
-                
-                
+                var btn = e as Button;
+                var index = GetIndexOfButton(btn);
+                _mainWindow.gridCursor.Margin = new Thickness(10 + (85 * index), 0, 0, 0);
             });
 
         }
