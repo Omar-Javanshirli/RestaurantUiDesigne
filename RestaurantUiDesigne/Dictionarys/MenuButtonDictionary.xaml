@@ -96,23 +96,29 @@
     </Style>
 
     <Style x:Key="myButton2" TargetType="Button">
-        <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderThickness" Value="5"/>
-        <Setter Property="BorderBrush" Value="Red"/>
+        <Setter Property="Foreground" Value="#cb6d5f"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border BorderThickness="0" Background="{TemplateBinding Background}" CornerRadius="5">
-                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Border BorderThickness="2" BorderBrush="#2d303e" Background="{TemplateBinding Background}" CornerRadius="5">
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <ContentPresenter.Resources>
+                                <Style TargetType="TextBlock">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Foreground" Value="White"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ContentPresenter.Resources>
+                        </ContentPresenter>
                     </Border>
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="#ea7c69"/>
                             <Setter Property="Foreground" Value="White"/>
-                            <Setter Property="BorderThickness" Value="5"/>
-                            <Setter Property="BorderBrush" Value="Red"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
