@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantUiDesigne.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace RestaurantUiDesigne.UserCantrols
         public EatUc()
         {
             InitializeComponent();
+            this.DataContext = new EatViewModel();
         }
     }
 }

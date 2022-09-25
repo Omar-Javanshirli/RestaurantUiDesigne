@@ -59,10 +59,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dictionarys\TabCOntrolDictionary.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Dictionarys\TextBlockDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -84,6 +80,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="Model\Eat.cs" />
     <Compile Include="Model\ImageClass.cs" />
     <Compile Include="Repo\FakeRepo.cs" />
     <Compile Include="UserCantrols\EatUc.xaml.cs">
@@ -94,6 +91,7 @@
     </Compile>
     <Compile Include="ViewModels\AppViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\EatViewModel.cs" />
     <Compile Include="ViewModels\MenuButtonViewUc.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -144,5 +142,18 @@
   <ItemGroup>
     <Resource Include="Image\Search.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\eat10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\eat11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\eat12.png" />
+    <Resource Include="Image\eat13.png" />
+    <Resource Include="Image\eat14.png" />
+    <Resource Include="Image\eat15.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

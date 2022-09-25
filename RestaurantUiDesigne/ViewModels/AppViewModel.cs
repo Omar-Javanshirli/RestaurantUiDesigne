@@ -17,6 +17,7 @@ namespace RestaurantUiDesigne.ViewModels
     public class AppViewModel : BaseViewModel
     {
         public FakeRepo ImageRepository { get; set; }
+        public FakeRepo EatRepository { get; set; }
         public ObservableCollection<ImageClass> Images { get; set; }
         public MainWindow _mainWindow;
 
@@ -47,6 +48,20 @@ namespace RestaurantUiDesigne.ViewModels
             return -1;
         }
 
+        public void GetEatUc()
+        {
+            EatRepository=new FakeRepo();
+            var eatUc = new ObservableCollection<Eat>(EatRepository.GetAllEat());
+            foreach (var item in eatUc)
+            {
+                EatViewModel eatViewModel = new EatViewModel();
+                eatViewModel.Eat = item;
+                EatUc eatUc1 = new EatUc();
+                eatUc1.DataContext=eatViewModel;
+                _mainWindow.eatWrapPanel.Children.Add(eatUc1);
+            }
+        }
+
         public AppViewModel(MainWindow mainWindow)
         {
             _mainWindow = mainWindow;
@@ -70,9 +85,10 @@ namespace RestaurantUiDesigne.ViewModels
             {
                 var btn = e as Button;
                 var index = GetIndexOfButton(btn);
-                _mainWindow.gridCursor.Margin = new Thickness(10 + (85 * index), 0, 0, 0);
+                _mainWindow.gridCursor.Margin = new Thickness(10 + (89 * index), 0, 0, 0);
             });
 
+            GetEatUc();
         }
     }
 }
