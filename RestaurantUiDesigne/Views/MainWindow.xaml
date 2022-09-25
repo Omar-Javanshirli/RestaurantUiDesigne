@@ -67,6 +67,7 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="130"/>
+                    <RowDefinition Height="3*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
@@ -86,6 +87,9 @@
                     <TextBlock Style="{StaticResource myTextBlock}" Text="Qty" FontSize="16" Canvas.Bottom="5" Canvas.Right="90"/>
                     <TextBlock Style="{StaticResource myTextBlock}" Text="Price" FontSize="16" Canvas.Bottom="5" Canvas.Right="20"/>
                 </Canvas>
+                <WrapPanel Grid.Row="1">
+                    
+                </WrapPanel>
             </Grid>
         </Border>
     </Grid>
