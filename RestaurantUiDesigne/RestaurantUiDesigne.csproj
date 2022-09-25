@@ -63,6 +63,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserCantrols\CalculationUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserCantrols\EatUc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -83,6 +87,9 @@
     <Compile Include="Model\Eat.cs" />
     <Compile Include="Model\ImageClass.cs" />
     <Compile Include="Repo\FakeRepo.cs" />
+    <Compile Include="UserCantrols\CalculationUC.xaml.cs">
+      <DependentUpon>CalculationUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserCantrols\EatUc.xaml.cs">
       <DependentUpon>EatUc.xaml</DependentUpon>
     </Compile>
@@ -91,6 +98,7 @@
     </Compile>
     <Compile Include="ViewModels\AppViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\CalculationViewModel.cs" />
     <Compile Include="ViewModels\EatViewModel.cs" />
     <Compile Include="ViewModels\MenuButtonViewUc.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
@@ -154,6 +162,11 @@
     <Resource Include="Image\eat14.png" />
     <Resource Include="Image\eat15.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Image\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\trash2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

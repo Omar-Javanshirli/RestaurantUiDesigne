@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantUiDesigne.UserCantrols"
              mc:Ignorable="d" 
-             d:DesignHeight="170" d:DesignWidth="150" Width="150" Height="170" Background="Transparent" Margin="15" >
+             d:DesignHeight="170" d:DesignWidth="150" Width="150" Height="170" Background="Transparent" Margin="15"  >
     <Grid>
         <Border CornerRadius="10" Background="#1F1D2B" >
             <Canvas>

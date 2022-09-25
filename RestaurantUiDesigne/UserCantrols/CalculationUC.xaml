@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="RestaurantUiDesigne.UserCantrols.CalculationUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantUiDesigne.UserCantrols"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="300" Background="#1F1D2B">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Canvas Grid.Row="0">
+            <Image Width="40" Source="/Image/eat10.png" Canvas.Left="10" Canvas.Top="5"/>
+            <TextBlock Style="{StaticResource myTextBlock}" Width="100" Canvas.Left="55" Canvas.Top="10" Text="Description" FontSize="10"/>
+            <TextBlock Style="{StaticResource myTextBlock}" Width="20" Canvas.Left="55" Canvas.Top="25" Text="$2.5" FontSize="10"/>
+            <Border Width="30" Height="30" Canvas.Right="50" Canvas.Top="10" Background="#252836" CornerRadius="5">
+                <TextBlock Style="{StaticResource myTextBlock}" FontSize="15" Text="10" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+            <TextBlock Style="{StaticResource myTextBlock}" Text="$4.50" Canvas.Right="10" Canvas.Top="20" FontSize="10"/>
+        </Canvas>
+        <Canvas Grid.Row="1">
+            <Border Canvas.Left="10" Canvas.Top="17" CornerRadius="5" Background="#252836">
+                <TextBox Width="240" Background="Transparent" BorderThickness="0" Height="17" Text="Order note.."
+                         FontSize="8" Foreground="#68717c" VerticalContentAlignment="Center" />
+            </Border>
+
+            <Button Style="{StaticResource myButton2}" Canvas.Right="10" Canvas.Top="10" Width="30" Height="30" BorderBrush="#ea7c69">
+                <Image Source="/Image/trash2.png" Width="15"/>
+            </Button>
+        </Canvas>
+    </Grid>
+</UserControl>
