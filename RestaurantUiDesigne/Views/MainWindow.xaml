@@ -59,7 +59,7 @@
                 <StackPanel Grid.Row="1" Margin="40">
                     <WrapPanel Name="eatWrapPanel">
 
-                        </WrapPanel>
+                    </WrapPanel>
                 </StackPanel>
             </Grid>
         </Border>
@@ -87,9 +87,11 @@
                     <TextBlock Style="{StaticResource myTextBlock}" Text="Qty" FontSize="16" Canvas.Bottom="5" Canvas.Right="90"/>
                     <TextBlock Style="{StaticResource myTextBlock}" Text="Price" FontSize="16" Canvas.Bottom="5" Canvas.Right="20"/>
                 </Canvas>
-                <WrapPanel Grid.Row="1">
+
+                <WrapPanel Grid.Row="1" x:Name="calcualeteWrapPanel">
                     
                 </WrapPanel>
+
             </Grid>
         </Border>
     </Grid>

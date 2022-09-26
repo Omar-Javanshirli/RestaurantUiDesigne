@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantUiDesigne.UserCantrols"
              mc:Ignorable="d" 
-             d:DesignHeight="100" d:DesignWidth="300" Background="#1F1D2B">
+             d:DesignHeight="100" d:DesignWidth="300" Background="#1F1D2B" Width="300" Height="100">
     <Grid>
 
         <Grid.RowDefinitions>
@@ -14,21 +14,22 @@
         </Grid.RowDefinitions>
 
         <Canvas Grid.Row="0">
-            <Image Width="40" Source="/Image/eat10.png" Canvas.Left="10" Canvas.Top="5"/>
-            <TextBlock Style="{StaticResource myTextBlock}" Width="100" Canvas.Left="55" Canvas.Top="10" Text="Description" FontSize="10"/>
-            <TextBlock Style="{StaticResource myTextBlock}" Width="20" Canvas.Left="55" Canvas.Top="25" Text="$2.5" FontSize="10"/>
+            <Image Width="40" Source="{Binding Eat.Image,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  Canvas.Left="10" Canvas.Top="5" x:Name="image"/>
+            <TextBlock Style="{StaticResource myTextBlock}" Width="100" Canvas.Left="55" Canvas.Top="10" Text="{Binding Eat.Description,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" x:Name="description" FontSize="10"/>
+            <TextBlock Style="{StaticResource myTextBlock}" Width="30" Canvas.Left="55" Canvas.Top="25" Text="{Binding Eat.Price,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Name="price" FontSize="10"/>
             <Border Width="30" Height="30" Canvas.Right="50" Canvas.Top="10" Background="#252836" CornerRadius="5">
-                <TextBlock Style="{StaticResource myTextBlock}" FontSize="15" Text="10" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBox Text="1"  Background="Transparent" BorderThickness="0" x:Name="eatNumberTb" Foreground="White" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Border>
-            <TextBlock Style="{StaticResource myTextBlock}" Text="$4.50" Canvas.Right="10" Canvas.Top="20" FontSize="10"/>
+            <TextBlock Style="{StaticResource myTextBlock}" x:Name="totalPriceTb" Canvas.Right="10" Canvas.Top="20" FontSize="10"
+                       Text="{Binding TotalPriceTb,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
         </Canvas>
         <Canvas Grid.Row="1">
             <Border Canvas.Left="10" Canvas.Top="17" CornerRadius="5" Background="#252836">
-                <TextBox Width="240" Background="Transparent" BorderThickness="0" Height="17" Text="Order note.."
+                <TextBox Width="240"  Background="Transparent" BorderThickness="0" Height="25" Text="Order note.."
                          FontSize="8" Foreground="#68717c" VerticalContentAlignment="Center" />
             </Border>
 
-            <Button Style="{StaticResource myButton2}" Canvas.Right="10" Canvas.Top="10" Width="30" Height="30" BorderBrush="#ea7c69">
+            <Button Style="{StaticResource myButton2}" Canvas.Right="10" Canvas.Top="14" Width="30" Height="30" BorderBrush="#ea7c69">
                 <Image Source="/Image/trash2.png" Width="15"/>
             </Button>
         </Canvas>

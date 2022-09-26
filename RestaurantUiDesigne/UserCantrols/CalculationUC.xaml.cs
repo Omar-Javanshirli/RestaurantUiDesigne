@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantUiDesigne.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,13 @@ namespace RestaurantUiDesigne.UserCantrols
     /// </summary>
     public partial class CalculationUC : UserControl
     {
+
         public CalculationUC()
         {
             InitializeComponent();
+            var vm = new CalculationViewModel();
+            vm.TotalPriceTb=totalPriceTb;
+            vm.EatNumberTb = eatNumberTb;
         }
     }
 }

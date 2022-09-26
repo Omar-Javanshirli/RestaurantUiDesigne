@@ -9,7 +9,11 @@
     <Grid>
         <Border CornerRadius="10" Background="#1F1D2B" >
             <Canvas>
-                <Image Canvas.Left="35" Canvas.Top="10" Source="{Binding Eat.Image,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="80" />
+                <Image Canvas.Left="35" Canvas.Top="10" Source="{Binding Eat.Image,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="80">
+                    <Image.InputBindings>
+                        <MouseBinding Gesture="LeftClick" Command="{Binding SelectCommand}"/>
+                    </Image.InputBindings>
+                </Image>
                 <TextBlock Text="{Binding Eat.Description,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Canvas.Left="25" Canvas.Bottom="40" TextWrapping="Wrap" Foreground="White"
                        FontStyle="Italic" FontFamily="Georgia" Width="120"/>
                 <TextBlock Text="{Binding Eat.Price,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Canvas.Left="55" Canvas.Bottom="20" Foreground="White" FontFamily="Georgia"

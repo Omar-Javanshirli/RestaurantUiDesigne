@@ -21,10 +21,12 @@ namespace RestaurantUiDesigne
     /// </summary>
     public partial class MainWindow : Window
     {
+        public WrapPanel CalculateWrap { get; set; }
         public MainWindow()
         {
             InitializeComponent();
             var vm = new AppViewModel(this);
+            App.CalculateWrap = calcualeteWrapPanel;
             this.DataContext = vm;
         }
     }
