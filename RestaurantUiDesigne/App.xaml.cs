@@ -15,7 +15,6 @@ namespace RestaurantUiDesigne
     public partial class App : Application
     {
         public static WrapPanel CalculateWrap;
-
         public App()
         {
 

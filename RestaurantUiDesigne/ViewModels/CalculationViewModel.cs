@@ -1,4 +1,5 @@
-﻿using RestaurantUiDesigne.Model;
+﻿using RestaurantUiDesigne.Command;
+using RestaurantUiDesigne.Model;
 using RestaurantUiDesigne.UserCantrols;
 using System;
 using System.Collections.Generic;
@@ -32,7 +33,6 @@ namespace RestaurantUiDesigne.ViewModels
         public CalculationViewModel()
         {
 
-            EatNumberTb.Text = "2";
         }
     }
 }

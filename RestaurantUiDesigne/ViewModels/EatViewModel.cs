@@ -23,6 +23,7 @@ namespace RestaurantUiDesigne.ViewModels
                 var view = new CalculationUC();
                 view.DataContext = viewModel;
                 viewModel.Eat = Eat;
+                
                 App.CalculateWrap.Children.Add(view);
             });
         }

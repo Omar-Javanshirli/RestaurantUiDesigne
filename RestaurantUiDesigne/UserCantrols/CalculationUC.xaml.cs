@@ -27,7 +27,8 @@ namespace RestaurantUiDesigne.UserCantrols
             InitializeComponent();
             var vm = new CalculationViewModel();
             vm.TotalPriceTb=totalPriceTb;
-            vm.EatNumberTb = eatNumberTb;
+            vm.EatNumberTb=eatNumberTb;
+            this.DataContext = vm;
         }
     }
 }

@@ -18,7 +18,10 @@
             <TextBlock Style="{StaticResource myTextBlock}" Width="100" Canvas.Left="55" Canvas.Top="10" Text="{Binding Eat.Description,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" x:Name="description" FontSize="10"/>
             <TextBlock Style="{StaticResource myTextBlock}" Width="30" Canvas.Left="55" Canvas.Top="25" Text="{Binding Eat.Price,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Name="price" FontSize="10"/>
             <Border Width="30" Height="30" Canvas.Right="50" Canvas.Top="10" Background="#252836" CornerRadius="5">
-                <TextBox Text="1"  Background="Transparent" BorderThickness="0" x:Name="eatNumberTb" Foreground="White" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBox Text="{Binding EatNumberTb,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  
+                         Background="Transparent" BorderThickness="0" x:Name="eatNumberTb" Foreground="White"
+                         FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"
+                         ></TextBox>
             </Border>
             <TextBlock Style="{StaticResource myTextBlock}" x:Name="totalPriceTb" Canvas.Right="10" Canvas.Top="20" FontSize="10"
                        Text="{Binding TotalPriceTb,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
