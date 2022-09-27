@@ -58,7 +58,7 @@
 
                 <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
                     
-                <StackPanel Grid.Row="1" Margin="40">
+                <StackPanel Grid.Row="1" Margin="40" Width="600">
 
 
                     <WrapPanel  Name="eatWrapPanel">
