@@ -9,7 +9,7 @@ namespace RestaurantUiDesigne.Model
     public class Eat
     {
         public string Description { get; set; }
-        public string Price { get; set; }
+        public double Price { get; set; }
         public string Image { get; set; }
     }
 }

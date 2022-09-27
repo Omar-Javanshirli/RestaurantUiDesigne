@@ -23,7 +23,7 @@
                          FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"
                          ></TextBox>
             </Border>
-            <TextBlock Style="{StaticResource myTextBlock}" x:Name="totalPriceTb" Canvas.Right="10" Canvas.Top="20" FontSize="10"
+            <TextBlock Style="{StaticResource myTextBlock}" x:Name="totalPriceTb" Canvas.Right="0" Canvas.Top="20" FontSize="15"
                        Text="{Binding TotalPriceTb,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
         </Canvas>
         <Canvas Grid.Row="1">

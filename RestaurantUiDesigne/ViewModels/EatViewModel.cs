@@ -23,7 +23,14 @@ namespace RestaurantUiDesigne.ViewModels
                 var view = new CalculationUC();
                 view.DataContext = viewModel;
                 viewModel.Eat = Eat;
+                viewModel.EatNumberTb = "1";
+
                 
+                var number = double.Parse(viewModel.EatNumberTb);
+                var price = viewModel.Eat.Price;
+
+                var result = number * price;
+                viewModel.TotalPriceTb = result.ToString();
                 App.CalculateWrap.Children.Add(view);
             });
         }

@@ -56,15 +56,15 @@
                     </Border>
                 </Canvas>
 
-                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
-                    
-                <StackPanel Grid.Row="1" Margin="40" Width="600">
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Background="Transparent"  
+                               Foreground="Transparent">
 
+                    <StackPanel Grid.Row="1" Margin="40" Width="560">
 
-                    <WrapPanel  Name="eatWrapPanel">
+                        <WrapPanel  Name="eatWrapPanel">
 
-                    </WrapPanel>
-                </StackPanel>
+                        </WrapPanel>
+                    </StackPanel>
                 </ScrollViewer>
 
             </Grid>
@@ -90,11 +90,12 @@
                             Canvas.Left="185" Canvas.Top="60" FontSize="15" Width="70"/>
 
                     <TextBlock Style="{StaticResource myTextBlock}" Text="Item" FontSize="16" Canvas.Bottom="5" Canvas.Left="17"/>
-                    <TextBlock Style="{StaticResource myTextBlock}" Text="Qty" FontSize="16" Canvas.Bottom="5" Canvas.Right="90"/>
-                    <TextBlock Style="{StaticResource myTextBlock}" Text="Price" FontSize="16" Canvas.Bottom="5" Canvas.Right="20"/>
+                    <TextBlock Style="{StaticResource myTextBlock}" Text="Qty" FontSize="16" Canvas.Bottom="5" Canvas.Right="75"/>
+                    <TextBlock Style="{StaticResource myTextBlock}" Text="Price" FontSize="16" Canvas.Bottom="5" Canvas.Right="10"/>
                 </Canvas>
 
-                <WrapPanel Grid.Row="1" x:Name="calcualeteWrapPanel">
+
+                <WrapPanel Grid.Row="1" x:Name="calcualeteWrapPanel" ScrollViewer.VerticalScrollBarVisibility="Hidden">
 
                 </WrapPanel>
 

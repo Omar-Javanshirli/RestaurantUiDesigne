@@ -32,7 +32,6 @@ namespace RestaurantUiDesigne.ViewModels
 
         public CalculationViewModel()
         {
-            EatNumberTb="3";
         }
     }
 }

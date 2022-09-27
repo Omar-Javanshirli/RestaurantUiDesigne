@@ -54,6 +54,7 @@ namespace RestaurantUiDesigne.ViewModels
             var eatUc = new ObservableCollection<Eat>(EatRepository.GetAllEat());
             foreach (var item in eatUc)
             {
+                
                 EatViewModel eatViewModel = new EatViewModel();
                 eatViewModel.Eat = item;
                 EatUc eatUc1 = new EatUc();
@@ -67,7 +68,7 @@ namespace RestaurantUiDesigne.ViewModels
             _mainWindow = mainWindow;
             ImageRepository = new FakeRepo();
             Images = new ObservableCollection<ImageClass>(ImageRepository.GetAllImage());
-            int y = 30;
+            int y = 70;
             int x = 0;
             foreach (var item in Images)
             {
