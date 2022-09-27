@@ -21,8 +21,8 @@
         <Border Grid.Column="1" Background="#252836" Margin="-10 0 0 0" CornerRadius="4 4 4 4">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="100"/> 
-                    <RowDefinition Height="*"/> 
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Canvas Grid.Row="0">
                     <Label Content="Jeager Resto" Foreground="White" FontSize="20" Canvas.Left="10" FontStyle="Italic" FontFamily="Georgia"
@@ -56,11 +56,17 @@
                     </Border>
                 </Canvas>
 
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                    
                 <StackPanel Grid.Row="1" Margin="40">
-                    <WrapPanel Name="eatWrapPanel">
+
+
+                    <WrapPanel  Name="eatWrapPanel">
 
                     </WrapPanel>
                 </StackPanel>
+                </ScrollViewer>
+
             </Grid>
         </Border>
         <Border Grid.Column="2" Background="#1F1D2B" CornerRadius="10 10 10 10 " Margin="-10 0 0 0">
@@ -89,7 +95,7 @@
                 </Canvas>
 
                 <WrapPanel Grid.Row="1" x:Name="calcualeteWrapPanel">
-                    
+
                 </WrapPanel>
 
             </Grid>

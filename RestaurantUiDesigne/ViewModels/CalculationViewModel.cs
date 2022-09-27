@@ -14,17 +14,17 @@ namespace RestaurantUiDesigne.ViewModels
     {
         public Eat Eat { get; set; }
 
-        private TextBox eatNumberTb;
+        private string eatNumberTb;
 
-        public TextBox EatNumberTb
+        public string EatNumberTb
         {
             get { return eatNumberTb; }
             set { eatNumberTb = value; OnPropertyChanged(); }
         }
 
-        private TextBlock totalPriceTb;
+        private string totalPriceTb;
 
-        public TextBlock TotalPriceTb
+        public string TotalPriceTb
         {
             get { return totalPriceTb; }
             set { totalPriceTb = value; OnPropertyChanged(); }
@@ -32,7 +32,7 @@ namespace RestaurantUiDesigne.ViewModels
 
         public CalculationViewModel()
         {
-
+            EatNumberTb="3";
         }
     }
 }
