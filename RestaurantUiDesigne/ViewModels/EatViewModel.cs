@@ -25,7 +25,6 @@ namespace RestaurantUiDesigne.ViewModels
                 viewModel.Eat = Eat;
                 viewModel.EatNumberTb = "1";
 
-                
                 var number = double.Parse(viewModel.EatNumberTb);
                 var price = viewModel.Eat.Price;
 

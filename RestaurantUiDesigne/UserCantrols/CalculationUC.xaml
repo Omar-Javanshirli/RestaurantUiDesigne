@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:RestaurantUiDesigne.UserCantrols"
+             xmlns:local="clr-namespace:RestaurantUiDesigne.UserCantrols" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="300" Background="#1F1D2B" Width="300" Height="100">
     <Grid>
@@ -21,7 +21,14 @@
                 <TextBox Text="{Binding EatNumberTb,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  
                          Background="Transparent" BorderThickness="0" x:Name="eatNumberTb" Foreground="White"
                          FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"
-                         ></TextBox>
+                         >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="TextChanged" >
+                            <i:InvokeCommandAction Command="{Binding TextChnageCommand}" ></i:InvokeCommandAction>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    
+                </TextBox>
             </Border>
             <TextBlock Style="{StaticResource myTextBlock}" x:Name="totalPriceTb" Canvas.Right="0" Canvas.Top="20" FontSize="15"
                        Text="{Binding TotalPriceTb,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>

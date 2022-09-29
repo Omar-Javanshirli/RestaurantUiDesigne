@@ -14,6 +14,8 @@ namespace RestaurantUiDesigne.ViewModels
     {
         public Eat Eat { get; set; }
 
+        public RelayCommand TextChangeCommand { get; set; }
+
         private string eatNumberTb;
 
         public string EatNumberTb
@@ -32,6 +34,13 @@ namespace RestaurantUiDesigne.ViewModels
 
         public CalculationViewModel()
         {
+            TextChangeCommand = new RelayCommand((e) =>
+            {
+                var number = double.Parse(EatNumberTb);
+                var price = Eat.Price;
+                var result = number * price;
+                TotalPriceTb = result.ToString();
+            });
         }
     }
 }
