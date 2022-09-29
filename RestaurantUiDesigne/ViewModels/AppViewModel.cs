@@ -30,6 +30,7 @@ namespace RestaurantUiDesigne.ViewModels
         }
 
         public RelayCommand ChangeButtonCommand { get; set; }
+        public RelayCommand BuyCommand { get; set; }
         public int GetIndexOfButton(Button button)
         {
             int index = 0;
@@ -90,6 +91,11 @@ namespace RestaurantUiDesigne.ViewModels
             });
 
             GetEatUc();
+
+            BuyCommand = new RelayCommand((e) =>
+            {
+                MessageBox.Show("Sccesfully");
+            });
         }
     }
 }
