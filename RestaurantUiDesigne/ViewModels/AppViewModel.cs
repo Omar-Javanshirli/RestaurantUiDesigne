@@ -89,7 +89,7 @@ namespace RestaurantUiDesigne.ViewModels
             {
                 MenuButtonViewUc menuButtonViewModel = new MenuButtonViewUc();
                 menuButtonViewModel.Image = item;
-                MenuButton menuButton = new MenuButton();
+                MenuButton menuButton = new MenuButton();  
                 menuButton.Margin = new Thickness(x, y, 5, 0);
                 y += 10;
                 menuButton.DataContext = menuButtonViewModel;
