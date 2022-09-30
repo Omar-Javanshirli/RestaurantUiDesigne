@@ -36,7 +36,7 @@ namespace RestaurantUiDesigne.ViewModels
         {
             TextChangeCommand = new RelayCommand((e) =>
             {
-                var number = double.Parse(EatNumberTb);
+                var number=double.Parse(EatNumberTb);
                 var price = Eat.Price;
                 var result = number * price;
                 TotalPriceTb = result.ToString();

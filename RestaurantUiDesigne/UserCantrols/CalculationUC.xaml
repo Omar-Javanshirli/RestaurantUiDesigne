@@ -22,17 +22,17 @@
                          Background="Transparent" BorderThickness="0" x:Name="eatNumberTb" Foreground="White"
                          FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"
                          >
-
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="TextChanged" >
+                            <i:InvokeCommandAction Command="{Binding TextChangeCommand}" ></i:InvokeCommandAction>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
 
                 </TextBox>
             </Border>
             <TextBlock Style="{StaticResource myTextBlock}" x:Name="totalPriceTb" Canvas.Right="0" Canvas.Top="20" FontSize="15"
                        Text="{Binding TotalPriceTb,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="TextChanged" >
-                            <i:InvokeCommandAction Command="{Binding TextChnageCommand}" ></i:InvokeCommandAction>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
+
             </TextBlock>
         </Canvas>
         <Canvas Grid.Row="1">
