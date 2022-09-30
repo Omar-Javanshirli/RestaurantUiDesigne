@@ -105,7 +105,8 @@
                     <TextBlock Text="Sub Total" FontSize="15" Foreground="Gray" FontStyle="Italic" FontFamily="Verdana"
                                Canvas.Left="15" Canvas.Top="45"/>
                     <Label Content="0" Foreground="White" FontSize="15" FontFamily="Verdana" FontStyle="Italic" Canvas.Right="10" Canvas.Top="20"/>
-                    <Label Content="0" Foreground="White" FontSize="15" FontFamily="Verdana" FontStyle="Italic" Canvas.Right="10" Canvas.Top="45"/>
+                    <Label Content="{Binding SubTotal,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                           Foreground="White" FontSize="15" FontFamily="Verdana" FontStyle="Italic" Canvas.Right="10" Canvas.Top="45"/>
 
                     <Button Style="{StaticResource myButton2}" Width="310" Height="30" Canvas.Bottom="5" Background="#ea7c69" Canvas.Left="5"
                             Command="{Binding BuyCommand}">

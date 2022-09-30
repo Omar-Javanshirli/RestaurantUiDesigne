@@ -31,15 +31,21 @@ namespace RestaurantUiDesigne.ViewModels
             get { return totalPriceTb; }
             set { totalPriceTb = value; OnPropertyChanged(); }
         }
+        
+
 
         public CalculationViewModel()
         {
             TextChangeCommand = new RelayCommand((e) =>
             {
-                var number=double.Parse(EatNumberTb);
-                var price = Eat.Price;
-                var result = number * price;
-                TotalPriceTb = result.ToString();
+                if (EatNumberTb != "")
+                {
+                    var number=double.Parse(EatNumberTb);
+                    var price = Eat.Price;
+                    var result = number * price;
+                    TotalPriceTb = result.ToString();
+                }
+
             });
         }
     }

@@ -29,6 +29,17 @@ namespace RestaurantUiDesigne.ViewModels
             set { image = value; }
         }
 
+        private string subTotal;
+
+        public string SubTotal
+        {
+            get { return subTotal; }
+            set { subTotal = value; }
+        }
+
+
+
+
         public RelayCommand ChangeButtonCommand { get; set; }
         public RelayCommand BuyCommand { get; set; }
         public int GetIndexOfButton(Button button)
@@ -61,7 +72,10 @@ namespace RestaurantUiDesigne.ViewModels
                 EatUc eatUc1 = new EatUc();
                 eatUc1.DataContext=eatViewModel;
                 _mainWindow.eatWrapPanel.Children.Add(eatUc1);
+
+
             }
+
         }
 
         public AppViewModel(MainWindow mainWindow)
