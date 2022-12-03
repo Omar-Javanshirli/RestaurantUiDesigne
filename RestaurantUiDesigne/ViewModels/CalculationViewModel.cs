@@ -42,8 +42,8 @@ namespace RestaurantUiDesigne.ViewModels
                 {
                     var number=double.Parse(EatNumberTb);
                     var price = Eat.Price;
-                    var result = number * price;
-                    TotalPriceTb = result.ToString();
+                    //var result = number * price;
+                    //TotalPriceTb = result.ToString();
                 }
 
             });

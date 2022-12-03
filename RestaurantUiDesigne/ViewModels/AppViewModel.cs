@@ -19,8 +19,10 @@ namespace RestaurantUiDesigne.ViewModels
         public FakeRepo ImageRepository { get; set; }
         public FakeRepo EatRepository { get; set; }
         public ObservableCollection<ImageClass> Images { get; set; }
-        public MainWindow _mainWindow;
 
+        public MainWindow _mainWindow;
+        public RelayCommand ChangeButtonCommand { get; set; }
+        public RelayCommand BuyCommand { get; set; }
 
         private ImageClass image;
         public ImageClass Image
@@ -37,11 +39,6 @@ namespace RestaurantUiDesigne.ViewModels
             set { subTotal = value; }
         }
 
-
-
-
-        public RelayCommand ChangeButtonCommand { get; set; }
-        public RelayCommand BuyCommand { get; set; }
         public int GetIndexOfButton(Button button)
         {
             int index = 0;
@@ -63,17 +60,19 @@ namespace RestaurantUiDesigne.ViewModels
         public void GetEatUc()
         {
             EatRepository=new FakeRepo();
-            var eatUc = new ObservableCollection<Eat>(EatRepository.GetAllEat());
+            //var eatUc = new ObservableCollection<Eat>(EatRepository.GetAllEat());
+
+            DataClasses1DataContext dtx = new DataClasses1DataContext();
+            var eatUc = from e in dtx.Eats
+                        select e;
+
             foreach (var item in eatUc)
             {
-                
                 EatViewModel eatViewModel = new EatViewModel();
                 eatViewModel.Eat = item;
                 EatUc eatUc1 = new EatUc();
                 eatUc1.DataContext=eatViewModel;
                 _mainWindow.eatWrapPanel.Children.Add(eatUc1);
-
-
             }
 
         }

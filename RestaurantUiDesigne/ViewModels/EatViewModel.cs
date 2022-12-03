@@ -28,8 +28,8 @@ namespace RestaurantUiDesigne.ViewModels
                 var number = double.Parse(viewModel.EatNumberTb);
                 var price = viewModel.Eat.Price;
 
-                var result = number * price;
-                viewModel.TotalPriceTb = result.ToString();
+                //var result = number * price;
+                //viewModel.TotalPriceTb = result.ToString();
                 App.CalculateWrap.Children.Add(view);
             });
         }

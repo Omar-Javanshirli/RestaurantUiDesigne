@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Restaurant" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=corporatesql.database.windows.net;Initial Catalog=Restaurant;User ID=corporatesqladmin;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False" SettingsObjectName="RestaurantUiDesigne.Properties.Settings" SettingsPropertyName="RestaurantConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Eat" Member="Eats">
+    <Type Name="Eat">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
