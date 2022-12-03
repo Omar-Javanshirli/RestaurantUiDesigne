@@ -207,18 +207,6 @@
     <Resource Include="Image\Search.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\eat10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Image\eat11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Image\eat12.png" />
-    <Resource Include="Image\eat13.png" />
-    <Resource Include="Image\eat14.png" />
-    <Resource Include="Image\eat15.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Image\trash.png" />
   </ItemGroup>
   <ItemGroup>

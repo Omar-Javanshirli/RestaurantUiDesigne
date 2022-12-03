@@ -1,4 +1,5 @@
 ﻿using RestaurantUiDesigne.Command;
+using RestaurantUiDesigne.Helper;
 using RestaurantUiDesigne.Model;
 using RestaurantUiDesigne.Repo;
 using RestaurantUiDesigne.UserCantrols;
@@ -79,6 +80,7 @@ namespace RestaurantUiDesigne.ViewModels
 
         public AppViewModel(MainWindow mainWindow)
         {
+            BlobStorage.DownloadImage();
             _mainWindow = mainWindow;
             ImageRepository = new FakeRepo();
             Images = new ObservableCollection<ImageClass>(ImageRepository.GetAllImage());

@@ -20,10 +20,6 @@ namespace RestaurantUiDesigne.Helper
 
             var files = container.ListBlobs();
 
-            Thread thread = new Thread(() =>
-            {
-
-            });
 
             foreach (var item in files)
             {
