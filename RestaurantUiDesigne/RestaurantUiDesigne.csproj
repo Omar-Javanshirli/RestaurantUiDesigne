@@ -131,7 +131,7 @@
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
     <Compile Include="Helper\BlobStorage.cs" />
-    <Compile Include="Model\Eat.cs" />
+    <Compile Include="Model\EatForView.cs" />
     <Compile Include="Model\ImageClass.cs" />
     <Compile Include="Repo\FakeRepo.cs" />
     <Compile Include="UserCantrols\CalculationUC.xaml.cs">
@@ -214,6 +214,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\eat10.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -60,19 +61,41 @@ namespace RestaurantUiDesigne.ViewModels
 
         public void GetEatUc()
         {
-            EatRepository=new FakeRepo();
             //var eatUc = new ObservableCollection<Eat>(EatRepository.GetAllEat());
+            EatRepository=new FakeRepo();
+            var imageList = BlobStorage.DownloadImage();
 
             DataClasses1DataContext dtx = new DataClasses1DataContext();
             var eatUc = from e in dtx.Eats
                         select e;
 
+            int maxCount = eatUc.Count();
+            if (eatUc.Count() > maxCount)
+            {
+                for (int i = 1,k=i; i < eatUc.Count(); i++,k++)
+                {
+                    var eatImage = from e in dtx.Eats
+                                   where e.Id == i
+                                   select e;
+                    foreach (Eat item in eatImage)
+                    {
+                        if (k == imageList.Count())
+                            k = 1;
+                        item.ImagePath = imageList[k];
+                        dtx.SubmitChanges();
+                    }
+                }
+            }
+
             foreach (var item in eatUc)
             {
+                string image = "/Image/";
                 EatViewModel eatViewModel = new EatViewModel();
-                eatViewModel.Eat = item;
+                eatViewModel.Eatt.ImagePath = image+item.ImagePath;
+                eatViewModel.Eatt.Price = ((int)item.Price);
+                eatViewModel.Eatt.Description = item.Description;
                 EatUc eatUc1 = new EatUc();
-                eatUc1.DataContext=eatViewModel;
+                eatUc1.DataContext = eatViewModel;
                 _mainWindow.eatWrapPanel.Children.Add(eatUc1);
             }
 
@@ -80,7 +103,6 @@ namespace RestaurantUiDesigne.ViewModels
 
         public AppViewModel(MainWindow mainWindow)
         {
-            BlobStorage.DownloadImage();
             _mainWindow = mainWindow;
             ImageRepository = new FakeRepo();
             Images = new ObservableCollection<ImageClass>(ImageRepository.GetAllImage());

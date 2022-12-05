@@ -12,17 +12,26 @@ namespace RestaurantUiDesigne.ViewModels
 {
     public class EatViewModel : BaseViewModel
     {
-        public Eat Eat { get; set; }
+        private EatForView eatt;
+
+        public EatForView Eatt
+        {
+            get { return eatt; }
+            set { eatt = value; OnPropertyChanged(); }
+        }
 
         public RelayCommand SelectCommand { get; set; }
         public EatViewModel()
         {
+            Eatt= new EatForView();
             SelectCommand = new RelayCommand((e) =>
             {
                 var viewModel = new CalculationViewModel();
                 var view = new CalculationUC();
                 view.DataContext = viewModel;
-                viewModel.Eat = Eat;
+                viewModel.Eat.ImagePath =Eatt.ImagePath;
+                viewModel.Eat.Description =Eatt.Description;
+                viewModel.Eat.Price =((int)Eatt.Price);
                 viewModel.EatNumberTb = "1";
 
                 var number = double.Parse(viewModel.EatNumberTb);
