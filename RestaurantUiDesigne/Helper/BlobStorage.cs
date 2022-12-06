@@ -23,13 +23,15 @@ namespace RestaurantUiDesigne.Helper
 
             foreach (var item in files)
             {
-                string path = item.Uri.ToString().Substring(58);
+                string path = item.Uri.ToString();
                 var a = container.GetBlockBlobReference(path);
                 imagelist.Add(path);
-                //string image = path;
+                //var image = path;
                 //a.DownloadToFile($"~/../../../Image/{image}", FileMode.OpenOrCreate);
             }
             return imagelist;
+
+
         }
     }
 }  

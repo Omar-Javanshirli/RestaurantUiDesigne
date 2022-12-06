@@ -44,10 +44,10 @@ namespace RestaurantUiDesigne.ViewModels
         public int GetIndexOfButton(Button button)
         {
             int index = 0;
-            var panel=button.Parent as StackPanel;
+            var panel = button.Parent as StackPanel;
             foreach (var item in panel.Children)
             {
-                if(item is Button bt)
+                if (item is Button bt)
                 {
                     if (bt.Name == button.Name)
                     {
@@ -62,36 +62,32 @@ namespace RestaurantUiDesigne.ViewModels
         public void GetEatUc()
         {
             //var eatUc = new ObservableCollection<Eat>(EatRepository.GetAllEat());
-            EatRepository=new FakeRepo();
+            EatRepository = new FakeRepo();
             var imageList = BlobStorage.DownloadImage();
 
             DataClasses1DataContext dtx = new DataClasses1DataContext();
             var eatUc = from e in dtx.Eats
                         select e;
 
-            int maxCount = eatUc.Count();
-            if (eatUc.Count() > maxCount)
+            for (int i = 1, k = i; i < eatUc.Count(); i++, k++)
             {
-                for (int i = 1,k=i; i < eatUc.Count(); i++,k++)
+                var eatImage = from e in dtx.Eats
+                               where e.Id == i
+                               select e;
+                foreach (Eat item in eatImage)
                 {
-                    var eatImage = from e in dtx.Eats
-                                   where e.Id == i
-                                   select e;
-                    foreach (Eat item in eatImage)
-                    {
-                        if (k == imageList.Count())
-                            k = 1;
-                        item.ImagePath = imageList[k];
-                        dtx.SubmitChanges();
-                    }
+                    if (k == imageList.Count())
+                        k = 1;
+                    item.ImagePath = imageList[k];
+                    dtx.SubmitChanges();
                 }
             }
 
+
             foreach (var item in eatUc)
             {
-                string image = "/Image/";
                 EatViewModel eatViewModel = new EatViewModel();
-                eatViewModel.Eatt.ImagePath = image+item.ImagePath;
+                eatViewModel.Eatt.ImagePath = item.ImagePath;
                 eatViewModel.Eatt.Price = ((int)item.Price);
                 eatViewModel.Eatt.Description = item.Description;
                 EatUc eatUc1 = new EatUc();
@@ -112,7 +108,7 @@ namespace RestaurantUiDesigne.ViewModels
             {
                 MenuButtonViewUc menuButtonViewModel = new MenuButtonViewUc();
                 menuButtonViewModel.Image = item;
-                MenuButton menuButton = new MenuButton();  
+                MenuButton menuButton = new MenuButton();
                 menuButton.Margin = new Thickness(x, y, 5, 0);
                 y += 10;
                 menuButton.DataContext = menuButtonViewModel;
